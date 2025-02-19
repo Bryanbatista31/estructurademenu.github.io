@@ -1,0 +1,200 @@
+#barra-principal
+{
+    background-color: rgb(1, 128, 187);
+    padding: 5px 0px;
+}
+
+.lista-principal
+{
+    color: lightgray;
+    font-family: "Roboto,", serif;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 8em;
+    padding: 0px;
+    position: relative;
+}
+
+#tasa
+{
+    margin-left: 6em;
+}
+
+#bankself
+{
+    padding-left: 4em;
+}
+
+.roboto
+{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: width 100;
+}
+
+a
+{
+    color: lightgray;
+    text-decoration: none;
+}
+
+.dropdown
+{
+    padding: 0px 30px 0px 0px;
+}
+
+.submenu
+{
+    list-style: none;
+    position: absolute;
+    padding: 22px;
+    box-sizing: border-box;
+    top: 100%;
+    /* transform: translateX(-50%); */
+    transform: scale(0);
+    transition: transform 0.3 ease-in-out;
+    display: none;
+    z-index: 999;
+    text-align: center;
+    cursor: wait;
+}
+
+.submenu li
+{
+    padding: 10px;
+    color: rgb(80, 79, 79);
+    background-color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+.submenu li:hover
+{
+    color: white;
+    background-color: #1f618d;
+    text-align: center;
+}
+
+.lista-principal .dropdown:hover .submenu
+{
+    transform: scale(1);
+    display: block;
+}
+
+/* ***************************************************************** */
+
+.barra
+{
+    display: flex;
+    margin-top: 1em;
+    margin-left: 16em;
+    align-items: center;
+}
+
+img
+{
+    max-width: 90px;
+}
+
+.barra-navegacion
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    list-style: none;
+    gap: 15px;
+    color: grey;
+}
+
+.personal
+{
+    background-color: rgb(35, 67, 116);
+    color: white;
+    padding: 0px 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 155px;
+/*     border-left: 3px solid red; */
+}
+
+.personal li
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.personal li:hover
+{
+    background-color: white;
+    color: rgb(35, 67, 116);
+}
+
+.personal li::after
+{
+    content: "";
+    position: absolute;
+    height: 5%;
+    width: 2px;
+    margin-left: -12px;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.personal li:hover::after
+{
+    height: 100%;
+}
+
+.listpersonal
+{
+    padding: 15px 0px;
+}
+
+
+/* ************************************************************************** */
+
+/* .listpersonal
+{
+    position: relative;
+} */
+
+.submenu-personal
+{
+    position: absolute;
+    top: 100%;
+    padding-right: 50px;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+}
+
+.submenu-personal
+{
+    transition: background 0.3s ease-in-out;
+}
+
+/* .submenu-personal li
+{
+    color: white;
+    background-color: rgb(35, 67, 116);
+    text-align: center;
+} */
+
+.personal .listpersonal:hover .submenu-personal
+{
+    top: 100%;
+    background-color: rgb(238, 238, 238);
+    transform: scale(1);
+    display: block;
+}
